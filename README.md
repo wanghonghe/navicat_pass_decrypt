@@ -9,3 +9,6 @@
   pyinstaller -Fw -i favicon64.ico --onefile fromgui.py
 * 5、也可以通过nuitka编译：
   python -m nuitka --onefile --windows-icon-from-ico=favicon64.ico --disable-console fromgui.py
+
+
+#### 参考：https://github.com/HyperSine/how-does-navicat-encrypt-password
