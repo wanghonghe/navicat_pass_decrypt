@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Crypto.Hash import SHA1
 from Crypto.Cipher import AES, Blowfish
 from Crypto.Util import strxor, Padding
