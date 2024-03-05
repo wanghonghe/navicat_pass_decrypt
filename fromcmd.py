@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from Crypto.Hash import SHA1
 from Crypto.Cipher import AES, Blowfish
 from Crypto.Util import strxor, Padding
@@ -66,16 +65,18 @@ class Navicat12Crypto(Navicat11Crypto):
         padded_plaintext = cipher.decrypt(bytes.fromhex(s))
         return Padding.unpad(padded_plaintext, AES.block_size, style = 'pkcs7').decode('utf-8')
 
-print("帮助信息:")
-print("注册表导出密码，加密版本为11：")
+print("加密密码字符串查找方法：")
+print("一、注册表查找密码，加密版本为11：")
 print(R"1、打开注册表并找到HCU\SOFTWARE\PremiumSoft\Navicat\Servers")
 print("2、点击相应的服务器，在右边窗口中找到字符串键Pwd，双击此键")
 print("3、在出现的窗口中，“数值数据”下方的框中即为使用11版本加密的密码。")
-print("从软件导出密码，加密版本为12：")
+print("二、从软件导出密码，加密版本为12：")
 print("1、点击软件的“文件”——“导出连接”")
-print("2、选择导出的服务器并勾选下方的“到处密码”，导出.ncx连接文件")
-print("3、使用文本编辑器打开导出的.ncx文件，找到服务器对应的password字段后面的字符串即为使用12版本加密的密码。")
+print("2、勾选下方的“导出密码”，导出.ncx连接文件")
+print("3、用文本编辑器打开导出的.ncx文件，找到服务器对应的Password，等号后面的字符串即为使用12版本加密的密码。")
+print("作者：飘风剑，qq：12315557，邮箱：whhlcj@163.com")
 input("按任意键继续...")
+
 
 while True:
     print("请选择加密方式:")
